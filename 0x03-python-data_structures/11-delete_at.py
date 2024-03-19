@@ -9,10 +9,5 @@ def delete_at(my_list=[], idx=0):
     new_list = []
 
     # Iterate through the elements of the original list
-    for i in range(len(my_list)):
-        # Skip the element at the specified index (idx)
-        if i != idx:
-            # Append elements other than the one at idx to the modified list
-            new_list.append(my_list[i])
-
+    del new_list[idx]
     return new_list
