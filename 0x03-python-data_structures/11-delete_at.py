@@ -6,13 +6,13 @@ def delete_at(my_list=[], idx=0):
         return my_list
 
     # Initialize an empty list to store the modified list
-    my_list = []
+    new_list = []
 
     # Iterate through the elements of the original list
     for i in range(len(my_list)):
         # Skip the element at the specified index (idx)
         if i != idx:
             # Append elements other than the one at idx to the modified list
-            my_list.append(my_list[i])
+            new_list.append(my_list[i])
 
-    return my_list
+    return new_list
