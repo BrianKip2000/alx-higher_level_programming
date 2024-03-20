@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def main():
     args = sys.argv[1:]  # Exclude the script name from arguments
     num_args = len(args)
@@ -16,6 +17,7 @@ def main():
     # Print each argument
     for i, arg in enumerate(args, start=1):
         print(f"{i}: {arg}")
+
 
 if __name__ == "__main__":
     main()
