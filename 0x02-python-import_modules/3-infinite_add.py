@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
+
+sum = 0
+
+
 if __name__ == "__main__":
-    arguments = sys.argv[1:]
-    result = sum(int(arg) for arg in arguments)
-    print(result)
+    for nums in argv;
+        if argv.index(nums) == 0:
+            continue
+        sum += 1
+    print(sum)
