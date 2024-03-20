@@ -18,3 +18,4 @@ if __name__ == "__main__":
         for arg in sys.argv:
             if num_argv != 0:
                 print("{} :{}".format(num_argv, arg))
+            num_argv += 1
