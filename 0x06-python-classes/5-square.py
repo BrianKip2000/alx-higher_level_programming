@@ -1,33 +1,36 @@
 #!/usr/bin/python3
-"""Class to define square dimensions"""
+""" Class Square that defines a square """
 
 
 class Square:
+    """ Class Square """
     def __init__(self, size=0):
+        """ Constructor """
         self.size = size
 
     @property
     def size(self):
+        """ Getter """
         return self.__size
 
-    @property
+    @size.setter
     def size(self, value):
-        """Raise errors if the values dont match criterion"""
-        if not isinstance(size, int):
+        """ Setter """
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
-    @property
     def area(self):
-        return (self.__area * self.__area)
+        """ Calculatre square area """
+        return(self.__size * self.__size)
 
-    @property
     def my_print(self):
-        if size is not equal to 0:
+        """ Print square """
+        if self.size != 0:
             for square in range(0, self.size):
-            print("#" * self.size)
+                print("#" * self.size)
         else:
-            print(" ")
+            print("")
