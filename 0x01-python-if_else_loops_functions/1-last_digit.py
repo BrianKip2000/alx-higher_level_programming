@@ -7,4 +7,4 @@ if number > 5:
 elif number == 0:
     print("Last digit of {:d} is {:d} and is 0".format(number, number % 10))
 else:
-    print("Last digit of {:d} is {:d} and is 6 and not 0".format(number, number % (-10)))
+    print("Last digit of {:d} is {:d} and is less than 6 and not 0".format(number, number % (-10)))
