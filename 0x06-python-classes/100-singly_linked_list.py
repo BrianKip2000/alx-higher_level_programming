@@ -20,9 +20,14 @@ class Node:
 
     @data.setter
     def data(self, value):
-        """Setter"""
+        """Setter
+        
+        args:
+            value(int): value is int type
+        raise:
+            TypeError with text: 'data must be an integer'"""
         if not isinstance(value, int):
-            raise TypeError("data must begin with an integer")
+            raise TypeError("data must be an integer")
         self.__data = value
     
     @property
@@ -37,10 +42,10 @@ class Node:
         args:
             value(int): value is ant integer and a Node
         Raise:
-            raise TypeError 'next_node must be a Node object or None'
+            raise TypeError 'next_node must be a Node object'
         """
         if value is not None and not isinstance(value, Node):
-            raise TypeError("next_node must be a Node object or None")
+            raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 class SinglyLinkedList:
