@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for x in range(97, 123):
-    print("{:c}".format(x), end='')
+for i in range(97, 123):
+    print(chr(i), end='')
