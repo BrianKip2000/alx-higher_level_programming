@@ -48,34 +48,42 @@ class Node:
 
 
 class SinglyLinkedList:
-    """Class Singly Linked List with no args."""
+    """Class that defines a singly linked list"""
+
     def __init__(self):
+        """Define private instance attribute: head(first node)"""
+
         self.head = None
 
+    def __str__(self):
+        """Define private instance attributes: printall & location"""
+
+        printall = ""
+        location = self.head
+        while location:
+            printall += str(location.data) + "\n"
+            location = location.next_node
+
+        return printall[:-1]
+
     def sorted_insert(self, value):
-        """Sorting insert"""
-        new_node = Node(value)
-        if self.head is None:
-            self.head = new_node
+        """Function that inserts new node into correct sorted position"""
+
+        tmp_node = Node(value)
+        if not self.head:
+            self.head = tmp_node
             return
 
         if value < self.head.data:
-            new_node.next_node = self.head
-            self.head = new_node
+            tmp_node.next_node = self.head
+            self.head = tmp_node
             return
 
-        current = self.head
-        while current.next_node is not None and current.next_node.data < value:
-            current = current.next_node
+        location = self.head
+        while location.next_node and location.next_node.data < value:
+            location = location.next_node
 
-        new_node.next_node = current.next_node
-        current.next_node = new_node
+        if location.next_node:
+            tmp_node.next_node = location.next_node
 
-    def __str__(self):
-        """Making it a string"""
-        result = ""
-        current = self.head
-        while current:
-            result += str(current.data) + "\n"
-            current = current.next_node
-        return result
+        location.next_node = tmp_node
