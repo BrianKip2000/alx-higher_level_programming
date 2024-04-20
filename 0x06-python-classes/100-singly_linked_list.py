@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"Creating a singly linked list node"
+"""Creating a Class Node."""
 
 class Node:
-    "Class Node"
+    "Class Node to take arguments."
     def __init__(self, data, next_node=None):
+        """Initialize the class with __init__ definition:
+        
+        Arguments:
+            data(int): first argument
+            next_node(Node, optional)= second argument equal to None.
+        """
         self.data = data
         self.next_node = next_node
 
@@ -26,13 +32,19 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        """Setter"""
+        """Setter:
+        
+        args:
+            value(int): value is ant integer and a Node
+        Raise:
+            raise TypeError 'next_node must be a Node object or None'
+        """
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object or None")
         self.__next_node = value
 
 class SinglyLinkedList:
-    """Class Singly Linked List"""
+    """Class Singly Linked List with no args."""
     def __init__(self):
         self.head = None
 
