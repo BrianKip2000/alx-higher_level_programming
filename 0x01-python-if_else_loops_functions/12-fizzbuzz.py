@@ -7,10 +7,10 @@ def fizzbuzz():
     for both multiples of 3 and 5 it prints fizzbuzz"""
     for num in range(1, 101):
         if (num % 3 == 0) and (num % 5 == 0):
-            print("FizzBuzz")
+            print("FizzBuzz", end=' ')
         elif (num % 5 == 0):
-            print("Buzz")
+            print("Buzz", end=' ')
         elif (num % 3 == 0):
-            print("Fizz")
+            print("Fizz", end=' ')
         else:
-            print(num)
+            print(num, end=' ')
