@@ -8,4 +8,3 @@ def print_last_digit(number):
     new_last = abs(number) % 10
     print(new_last, end='')
     return new_last
-    
