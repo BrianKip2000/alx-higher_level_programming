@@ -2,17 +2,17 @@
 
 def matrix_divided(matrix, div):
     """Matrix funtion definition:
-    matrix_divided - funtion for the diviion purpose
-    @matrix: matrix input
-    @div : division argument
-    TODO:
-    checks if the matrix is a float or an integer.
-    if not, it should raise a TypeError with message:
-    "matrix must be amatrix of int or float"
-    also, if matrix length of row and column are not the same size:
-    raise another TypeError with different exception message.
-    if division is not by float or integer: raise another TypeError
-    lastly, if division is by zero, raise ZeroDivisionError"""
+        matrix_divided - funtion for the diviion purpose
+        @matrix: matrix input
+        @div : division argument
+        TODO:
+        checks if the matrix is a float or an integer.
+        if not, it should raise a TypeError with message:
+        "matrix must be amatrix of int or float"
+        also, if matrix length of row and column are not the same size:
+        raise another TypeError with different exception message.
+        if division is not by float or integer: raise another TypeError
+        lastly, if division is by zero, raise ZeroDivisionError"""
     if not all(isinstance(row, list)
                and all(isinstance(item, (int, float))
                        for item in row) for row in matrix):
