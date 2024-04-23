@@ -1,36 +1,22 @@
+"""This is a docstring for a python test for 0-add_integer.py"""
+"""it adds using the '+' symbol"""
+"""Only integers and floats"""
+=================================
+>>> add_integer = __import__("0-add_integer").add_integer
 >>> add_integer(2, 3)
 5
->>> add_integer(2.5, 3)
-5
->>> add_integer(2, 3.5)
-5
->>> add_integer(2.5, 3.5)
-5
->>> add_integer(2.5)
-100
+>>> add_integer(15.45, 87)
+102
+>>> add_integer('2', 4)
+Traceback (most recent call last):
+  ...
+ValueError: a must be an integer
+>>> add_integer(a3)
+Traceback (most recent call last):
+NameError: name 'a3' is not defined
 >>> add_integer(2)
 100
->>> add_integer(2, b=3)
-5
->>> add_integer(2, b=3.5)
-5
->>> add_integer(2.5, b=3)
-5
->>> add_integer(2.5, b=3.5)
-5
->>> add_integer('2', 3)
+>>> add_integer(2, '4')
 Traceback (most recent call last):
-...
-TypeError: a must be an integer or b must be an integer
->>> add_integer(2, '3')
-Traceback (most recent call last):
-...
-TypeError: a must be an integer or b must be an integer
->>> add_integer(2.5, '3')
-Traceback (most recent call last):
-...
-TypeError: a must be an integer or b must be an integer
->>> add_integer('2.5', '3')
-Traceback (most recent call last):
-...
-TypeError: a must be an integer or b must be an integer
+  ...
+ValueError: b must be an integer
