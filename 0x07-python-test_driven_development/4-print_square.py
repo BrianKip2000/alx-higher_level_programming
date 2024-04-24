@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-"""Module print_square 
+"""Module print_square
 Printing square size"""
+
 
 def print_square(size):
     """Funtion module to print size of square using #"""
@@ -13,5 +14,5 @@ def print_square(size):
         raise TypeError("size msut be an integer")
     for i in range(size):
         for j in range(size):
-            print("#",end="")
+            print("#", end="")
         print()
