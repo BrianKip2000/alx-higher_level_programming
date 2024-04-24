@@ -1,0 +1,53 @@
+""""This is a file for testing the module print_square from 4-print_square"""
+=============================================================================
+Import the function:
+    
+    >>> print_square = __import__("4-print_square").print_square
+
+Now test it:
+
+    >>> print_square(12)
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+
+    >>> print_square('t')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> print_square(5/4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> print_square(0)
+    >>> print_square(!)
+    File "<stdin>", line 1
+        print_square(!)
+                    ^
+    SyntaxError: invalid syntax
+    >>> print_square(t)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    NameError: name 't' is not defined
+    >>> print_square(NaN)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    NameError: name 'NaN' is not defined
+    >>> print_square(~)
+    File "<stdin>", line 1
+        print_square(~)
+                    ^
+    SyntaxError: invalid syntax
+    >>> print_square()
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    TypeError: print_square() missing 1 required positional argument: 'size'
