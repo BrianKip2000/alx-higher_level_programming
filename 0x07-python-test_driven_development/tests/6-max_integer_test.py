@@ -11,5 +11,5 @@ class TestMaxInteger(unittest.TestCase):
         """Class method for testing max integer
         Args:
             test_is_max: tests for maximum result"""
-        self.assertEqual(max_integer.max_integer([1,8,19,28]), 28)
+        self.assertEqual(max_integer([1,8,19,28]), 28)
         
