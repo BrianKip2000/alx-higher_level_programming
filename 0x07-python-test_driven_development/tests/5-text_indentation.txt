@@ -5,13 +5,31 @@
 
 Testing:
   >>> text_indentation = __import__("5-text_indentation").text_indentation
-  
-  >>> text_indentation(1)
+  >>> text_indentation("Brian ")
+  Brian >>> text_indentation("Go.To:\The")
+  Go.
+
+  To:
+
+  \The
+  >>> text_indentation("Go.To:\The\n")
+  Go.
+
+  To:
+
+  \The
+  >>> text_indentation(5)
   Traceback (most recent call last):
-      ...
+  ...
   TypeError: text must be a string
-  >>> text_indentation("B")
-  B
   >>> text_indentation(str(5))
   5
- 
+  >>> text_indentation('Love?')
+  Love?
+
+  >>> text_indentation('Tuee.')
+  Tuee.
+
+  >>> text_indentation('Tuee:')
+  Tuee:
+
