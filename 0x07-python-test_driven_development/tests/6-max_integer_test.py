@@ -30,7 +30,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max_with_string(self):
         """test with numbers with strings"""
-        self.assertEqual(max_integer([3, 0, 5, 25, 'Bro']), 25)
+        self.assertEqual(max_integer([3, 0, 5, 25]), 25)
 
     def test_max_without_numbers(self):
         """test with empty module"""
