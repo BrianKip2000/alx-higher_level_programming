@@ -6,17 +6,18 @@
 Testing:
   >>> text_indentation = __import__("5-text_indentation").text_indentation
   >>> text_indentation("Brian ")
-  Brian >>> text_indentation("Go.To:\The")
+  Brian
+  >>> text_indentation("Go.To:\The")
   Go.
-
+  <BLANKLINE>
   To:
-
+  <BLANKLINE>
   \The
   >>> text_indentation("Go.To:\The\n")
   Go.
-
+  <BLANKLINE>
   To:
-
+  <BLANKLINE>
   \The
   >>> text_indentation(5)
   Traceback (most recent call last):
@@ -26,10 +27,9 @@ Testing:
   5
   >>> text_indentation('Love?')
   Love?
-
+  <BLANKLINE>
   >>> text_indentation('Tuee.')
   Tuee.
-
+  <BLANKLINE>
   >>> text_indentation('Tuee:')
   Tuee:
-
