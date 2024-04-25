@@ -35,4 +35,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_without_numbers(self):
         """test with empty module"""
         self.assertEqual(max_integer([]), None)
+
+    def test_max_with_one(self):
+        """Case with only one number"""
+        self.assertEqual(max_integer([10000]), 10000)
     
