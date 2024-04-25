@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 """Module for printing text_indentation"""
 
+
 def text_indentation(text):
-    """ Doc """
+    """Text indentation
+    Args:
+        text(str): text should be string
+    Raises:
+        TypeError:"""
     if type(text) is not str:
         raise TypeError("text must be a string")
     after_new_line = False
