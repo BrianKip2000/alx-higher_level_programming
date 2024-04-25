@@ -1,0 +1,21 @@
+"""Python doctest for checking for strings in a text"""
+==============================================================================
+"5-text_indentation.py"
+==============================================================================
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation(Brina)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Brina' is not defined.
+>>> text_indentation(1)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation("B")
+B>>> text_indentation(str(5))
+5>>> text_indentation("I love eating chapati!?>. :")
+I love eating chapati!?
+
+>.
+
+:
