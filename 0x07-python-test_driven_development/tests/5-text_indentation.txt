@@ -5,7 +5,7 @@
 >>> text_indentation = __import__("5-text_indentation").text_indentation
 >>> text_indentation(Brina)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+  ...
 NameError: name 'Brina' is not defined.
 >>> text_indentation(1)
 Traceback (most recent call last):
