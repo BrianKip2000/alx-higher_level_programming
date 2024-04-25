@@ -6,7 +6,7 @@
 Testing:
   >>> text_indentation = __import__("5-text_indentation").text_indentation
   >>> text_indentation("Brian ")
-  Brian
+  Brian 
   >>> text_indentation("Go.To:\The")
   Go.
   <BLANKLINE>
@@ -33,3 +33,4 @@ Testing:
   <BLANKLINE>
   >>> text_indentation('Tuee:')
   Tuee:
+  <BLANKLINE>
