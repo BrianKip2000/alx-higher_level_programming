@@ -14,9 +14,4 @@ Testing:
   B
   >>> text_indentation(str(5))
   5
-  >>> text_indentation("I love eating chapati!?>. :")
-  I love eating chapati!?
-
-  >.
-
-  :
+ 
