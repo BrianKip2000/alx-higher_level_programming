@@ -12,8 +12,10 @@ Traceback (most recent call last):
     ...
 TypeError: text must be a string
 >>> text_indentation("B")
-B>>> text_indentation(str(5))
-5>>> text_indentation("I love eating chapati!?>. :")
+B
+>>> text_indentation(str(5))
+5
+>>> text_indentation("I love eating chapati!?>. :")
 I love eating chapati!?
 
 >.
