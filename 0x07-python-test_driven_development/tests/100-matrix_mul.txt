@@ -5,7 +5,6 @@
 Test begins:
 Import matrix_mul
     >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
-Check for list case
     >>> matrix_mul(([100, 100],
     ... [100, 100]), ([10, 10], [9, 8]))
     Traceback (most recent call last):
@@ -20,7 +19,7 @@ Check for list case
     >>> matrix_mul([[1, 2], [1, 2]], [[1, 2], [1, i]])
     Traceback (most recent call last):
         ...
-    NameError: name 'i' is not defined.
+    NameError: name 'i' is not defined
     >>> matrix_mul([[1, 2], [1, 2]], [[1, 2], [1,'i']])
     Traceback (most recent call last):
         ...
