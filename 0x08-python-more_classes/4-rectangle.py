@@ -55,5 +55,4 @@ class Rectangle:
         return rect_str.rstrip()
 
     def __repr__(self):
-        return f'Rectangle({self.height}, {self.width})'
-    
+        return f'Rectangle({self.width}, {self.height})'
