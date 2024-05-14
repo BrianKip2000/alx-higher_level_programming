@@ -64,11 +64,11 @@ def main():
     try:
         n = int(sys.argv[1])
     except ValueError:
-        print("N must be a number", file=sys.stderr)
+        print("N must be a number")
         sys.exit(1)
 
     if n < 4:
-        print("N must be at least 4", file=sys.stderr)
+        print("N must be at least 4")
         sys.exit(1)
 
     board = [[0 for _ in range(n)] for _ in range(n)]
