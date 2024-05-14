@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module to return a sorted list"""
 
 
 class MyList(list):
