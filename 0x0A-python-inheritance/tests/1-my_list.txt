@@ -6,22 +6,22 @@
 >>> my_list = MyList()
 >>> my_list.append("a")
 >>> print(my_list)
-    ['a']
+['a']
 >>> my_list.append(1, 4, 6)
-    Traceback (most recent call last):
-        ...
-    TypeError: list.append() takes exactly one argument (3 given)
+Traceback (most recent call last):
+    ...
+TypeError: list.append() takes exactly one argument (3 given)
 >>> my_list.append(1, 4)
-    Traceback (most recent call last):
-        ...
-    TypeError: list.append() takes exactly one argument (2 given)
+Traceback (most recent call last):
+    ...
+TypeError: list.append() takes exactly one argument (2 given)
 >>> my_list.append(1)
 >>> print(my_list)
-    ['a', 1]
+['a', 1]
 >>> my_list.append(a)
-    Traceback (most recent call last):
-        ...
-    NameError: name 'a' is not defined
+Traceback (most recent call last):
+    ...
+NameError: name 'a' is not defined
 >>> my_list.append()
 Traceback (most recent call last):
     ...
