@@ -58,7 +58,7 @@ def main():
     Main function to handle program arguments and solve the puzzle.
     """
     if len(sys.argv) != 2:
-        print("Usage: nqueens N", file=sys.stderr)
+        print("Usage: nqueens N")
         sys.exit(1)
 
     try:
