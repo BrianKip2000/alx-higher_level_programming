@@ -8,7 +8,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 try:
     existing_data = load_from_json_file("add_item.json")
-except FileExistsError:
+except Exception:
     existing_data = []
 
 for arg in sys.argv[1:]:
