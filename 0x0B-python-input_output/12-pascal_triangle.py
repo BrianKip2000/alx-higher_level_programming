@@ -3,7 +3,7 @@
 
 
 def pascal_triangle(n):
-    # Initialize triangle list to store rows
+    """Initialize triangle list to store rows"""
     triangle = []
 
 
