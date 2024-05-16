@@ -6,7 +6,6 @@ def pascal_triangle(n):
     """Initialize triangle list to store rows"""
     triangle = []
 
-
     if n <= 0:
         return triangle
 
