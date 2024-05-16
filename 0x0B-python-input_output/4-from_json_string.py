@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """Module conversts object to python Data Structure"""
+import json
 
 
 def from_json_string(my_str):
