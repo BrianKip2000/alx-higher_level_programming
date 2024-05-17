@@ -8,3 +8,6 @@ class TestClass(unittest.TestCase):
         obj_0 = Base(id=10)
         self.assertEqual(obj_0.id, 10)
 
+    def test_Null_Id(self):
+        pass
+
