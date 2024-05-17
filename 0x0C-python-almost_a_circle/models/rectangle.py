@@ -87,3 +87,8 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        """Returns the area of the rectangle based on height and width"""
+        return self.__width * self.__height
+    
