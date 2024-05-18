@@ -96,4 +96,3 @@ class Rectangle(Base):
         """Returns a printed # characters using for loop"""
         for i in range(self.height):
             print("#" * self.width)
-
