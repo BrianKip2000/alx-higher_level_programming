@@ -102,3 +102,11 @@ class Rectangle(Base):
         print("\n" * self.y, end="")
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
+
+    def update(self, *args):
+        """Sets id,width, height,x and y attribute"""
+        attributes = ['id', 'width', 'height', 'x', 'y']
+
+        for index, value in enumerate(args):
+            if index < len(attributes):
+                setattr(self, attributes[index], value)
