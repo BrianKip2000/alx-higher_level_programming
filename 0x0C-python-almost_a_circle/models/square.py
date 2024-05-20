@@ -12,7 +12,7 @@ class Square(Rectangle):
             size (int): size of the square equal to rect dim
             x (any): positional argument
             y (any): positional argument
-            id : unique id
+            id : unique id(str)
         """
         super().__init__(size, size, x, y, id)
 
