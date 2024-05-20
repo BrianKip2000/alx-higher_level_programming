@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from models.rectangle import Rectangle
+"""module for creating a square based on rect"""
 
 
 class Square(Rectangle):
