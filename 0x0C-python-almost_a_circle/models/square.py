@@ -30,8 +30,8 @@ class Square(Rectangle):
         """Method for setting the class size
         shall be equal to width and height"""
         if type(value) is not int:
-            raise TypeError(f"size must be an integer")
-        if value < 0:
-            raise ValueError(f"size must be >= 0")
+            raise TypeError(f"width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be >= 0")
         self.width = value
         self.height = value
