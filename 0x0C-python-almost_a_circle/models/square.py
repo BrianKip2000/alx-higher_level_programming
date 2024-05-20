@@ -19,3 +19,19 @@ class Square(Rectangle):
     def __str__(self):
         """String representation of the class"""
         return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
+
+    @property
+    def size(self):
+        """Getter for width form size"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Method for setting the class size
+        shall be equal to width and height"""
+        if type(value) is not int:
+            raise TypeError(f"size must be an integer")
+        if value < 0:
+            raise ValueError(f"size must be >= 0")
+        self.width = value
+        self.height = value
