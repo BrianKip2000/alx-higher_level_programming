@@ -1,2 +1,2 @@
 -- Drop database
-DROP DATABASE hbtn_0c_0;
+DROP SCHEMA IF EXISTS hbtn_0c_0;
