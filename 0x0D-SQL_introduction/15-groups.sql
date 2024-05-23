@@ -1,2 +1,2 @@
 -- List tables with same values
-SELECT score, COUNT(*) AS numbers FROM second_table GROUP BY score
+SELECT score, COUNT(*) AS numbers FROM second_table GROUP BY score DESC
