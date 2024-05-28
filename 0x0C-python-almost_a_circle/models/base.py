@@ -94,14 +94,16 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """Deserializes a csv file and returns a list of instances"""
-        filename = f"{cls.__name__}.csv"
+        try:
+            filename = f"{cls.__name__}.csv"
 
-        with open(filename, newline='') as fn:
-            reading =  csv.DictReader(fn)
-            lis = []
-            for x in reading:
-                for i, n in x.items():
-                    x[i] = int(n)
-                lis.append(x)
-            return (cls.create(**objects) for objects in lis)
-        
+            with open(filename, newline='') as fn:
+                reading =  csv.DictReader(fn)
+                lis = []
+                for x in reading:
+                    for i, n in x.items():
+                        x[i] = int(n)
+                    lis.append(x)
+                return (cls.create(**objects) for objects in lis)
+        except FileNotFoundError:
+            return []
