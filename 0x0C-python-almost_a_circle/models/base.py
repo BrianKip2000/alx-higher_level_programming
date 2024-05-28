@@ -72,48 +72,36 @@ class Base:
         return instances
 
     @classmethod
-    def save_to_file_csv(cls, objects):
+    def save_to_file_csv(cls, list_objs):
         """Saves file from csv"""
         filename = f"{cls.__name__}.csv"
 
+        if filename == 'Rectangle.csv':
+            fields = ['id', 'width', 'height', 'x', 'y']
+        elif filename == 'Square.csv':
+            fields = ['id', 'size', 'x', 'y']
+        
         with open(filename, 'w', newline='') as file:
-            writer = csv.writer(file)
-
-            if not objects:
-                return
-
-            if cls.__name__ == 'Rectangle':
-                for obj in objects:
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
-            elif cls.__name__ == 'Square':
-                for obj in objects:
-                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
-
-# Clean up by standardizing variable names, removing debugging statements, improving readability, and more. I removed the elif statement inside the if statement, which was redundant and made the code harder to read. I also renamed the parameter from `list_objs` to `objects` for better readability.
+            if list_objs is None:
+                writer = csv.writer(file)
+                writer.writerow([[]])
+            else:
+                writer = csv.DictWriter(file, fieldnames = fields)
+                writer.writeheader()
+                for w in list_objs:
+                    writer.writerow(w.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
-        """Deserializes a csv"""
-        try:
-            filename = f'{cls.__name__}.csv'
-        except Exception:
-            return
+        """Deserializes a csv file and returns a list of instances"""
+        filename = f"{cls.__name__}.csv"
 
-        instances = []
-
-        with open(filename, 'r') as file:
-            reader = csv.reader(file)
-            next(reader)
-
-            if cls.__name__ == 'Rectangle':
-                for row in reader:
-                    obj = cls(int(row[1]), int(row[2]), int(row[3]), int(row[4]))
-                    obj.id = int(row[0])
-                    instances.append(obj)
-            elif cls.__name__ == 'Square':
-                for row in reader:
-                    obj = cls(int(row[1]), int(row[2]), int(row[3]))
-                    obj.id = int(row[0])
-                    instances.append(obj)
-
-        return instances
+        with open(filename, newline='') as fn:
+            reading =  csv.DictReader(fn)
+            lis = []
+            for x in reading:
+                for i, n in x.items():
+                    x[i] = int(n)
+                lis.append(x)
+            return (cls.create(**objects) for objects in lis)
+        
