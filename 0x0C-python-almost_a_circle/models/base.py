@@ -80,13 +80,13 @@ class Base:
             fields = ['id', 'width', 'height', 'x', 'y']
         elif filename == 'Square.csv':
             fields = ['id', 'size', 'x', 'y']
-        
+
         with open(filename, 'w', newline='') as file:
             if list_objs is None:
                 writer = csv.writer(file)
                 writer.writerow([[]])
             else:
-                writer = csv.DictWriter(file, fieldnames = fields)
+                writer = csv.DictWriter(file, fieldnames=fields)
                 writer.writeheader()
                 for w in list_objs:
                     writer.writerow(w.to_dictionary())
@@ -98,7 +98,7 @@ class Base:
             filename = f"{cls.__name__}.csv"
 
             with open(filename, newline='') as fn:
-                reading =  csv.DictReader(fn)
+                reading = csv.DictReader(fn)
                 lis = []
                 for x in reading:
                     for i, n in x.items():
