@@ -1,9 +1,6 @@
 #!/usr/bin/node
 // Prints the first argument passed to it
-const { argv } = require('node:process')
+const args = process.argv.slice(2);
+const firstArgument = args[0] != undefined ? args[0] : 'No argument';
 
-if (argv[2] === undefined) {
-    console.log('No argument');
-} else {
-    console.log(`${argv[2]}`);
-}
+console.log(firstArgument)
