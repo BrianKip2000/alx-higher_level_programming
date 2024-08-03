@@ -2,8 +2,8 @@
 // Prints the first argument passed to it
 const { argv } = require('node:process')
 
-if (argv.length <= 2) {
+if (argv[2] === undefined) {
     console.log('No argument');
-} else if (argv.length > 2) {
+} else {
     console.log(`${argv[2]}`);
 }
