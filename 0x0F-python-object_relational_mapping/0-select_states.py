@@ -3,14 +3,12 @@
 import sys
 import MySQLdb
 
-
 if __name__ == "__main__":
     """Takes in db name, password, mysql username"""
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
 
-    #connecting to db
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
@@ -19,8 +17,7 @@ if __name__ == "__main__":
             db=database_name
             )
 
-    #cursor object creation
-    cur=db.cursor()
+    cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY id ASC")
 
@@ -28,8 +25,5 @@ if __name__ == "__main__":
 
     for row in rows:
         print(row)
-    
-
     cur.close()
     db.close()
-
