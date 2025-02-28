@@ -4,4 +4,4 @@ import dis
 
 def magic_calculation(a, b):
     """Prints multiplication of two numbers"""
-    return 98 * (a ** b)
+    return 98 + (a ** b)
